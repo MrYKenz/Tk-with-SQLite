@@ -63,7 +63,7 @@ class Form:
             cursor = db.cursor()
             cursor.execute("select name from sqlite_master where name=?",("tblFeedback",))
             result = cursor.fetchall()
-            if len(result) == 1:  # if table exists
+            if len(result) == 1:
                 cursor.execute("""INSERT INTO tblFeedback (Name,Email,Feedback)
                      VALUES(?,?,?)""",(name,email,feedback))
                 db.commit()
