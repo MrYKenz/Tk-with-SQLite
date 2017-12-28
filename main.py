@@ -67,7 +67,7 @@ class Form:
                 cursor.execute("""INSERT INTO tblFeedback (Name,Email,Feedback)
                      VALUES(?,?,?)""",(name,email,feedback))
                 db.commit()
-                print("table overwritten")
+                print("Feedback stored in tblFeedback")
             else:
                 cursor.execute("""create table tblFeedback
                 (FeedbackID integer,
@@ -75,7 +75,10 @@ class Form:
                 Email text,
                 Feedback text,
                 primary key(FeedbackID))""")
+                cursor.execute("""INSERT INTO tblFeedback (Name,Email,Feedback)
+                VALUES(?,?,?)""",(name,email,feedback))
                 db.commit()
+                print("Feedback stored in tblFeedback")
         self.clear()
         messagebox.showinfo(title='Thank you for your feedback', message='Comments Saved!')
     
