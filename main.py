@@ -29,9 +29,9 @@ class Form:
         ttk.Label(self.frame_header, image=self.logo).grid(row=0, column=0, rowspan=2)
         ttk.Label(self.frame_header, text='Thanks for Shopping!', style='Header.TLabel').grid(row=0, column=1)
         ttk.Label(self.frame_header, wraplength=300,
-                  text=("I hope you have enjoyed your time here.  "
-                        "Please tell us what you think about our service in the Feedback Section below.")).grid(row=1,
-                                                                                                                column=1)
+                  text=("I hope you have enjoyed your time here. " 
+                        "Please tell us what you think about our service "
+                        "in the Feedback Section below.")).grid(row=1, column=1)
 
         self.frame_content = ttk.Frame(master)
         self.frame_content.pack()
